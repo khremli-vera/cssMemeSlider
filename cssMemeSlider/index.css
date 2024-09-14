@@ -1,0 +1,158 @@
+html {
+    font-size: 10px;
+}
+
+
+body {
+    background-color:black;
+    
+    margin-left:auto;
+    margin-right:auto;
+    color: white;
+    padding-top: 10rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+section {
+    
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-wrapper {
+    
+    height: 50vw;
+    display: flex;
+}
+img {
+    width: 100%;
+    
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3rem;
+    object-fit: cover; 
+    
+}
+
+.slider-wrapper {
+    display: flex;
+    padding-top: 4rem;
+    justify-content: space-between;
+}
+
+.slider-btn {
+    background-color: #679130;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    position:relative;
+    
+}
+
+
+
+.btn-wrapper {
+    display: flex;
+    width: 12rem;
+    justify-content: space-between;
+    
+}
+
+p {
+    margin: 0;
+    font-size: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.slider-btn:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+
+.active {
+    background-color: black;
+    border: 2px solid #679130;
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.slider-btn.active:hover {
+    background-color: black;
+    border: 2px solid white;
+}
+
+.slider-btn:after {
+    content: "";
+    position: absolute;
+    left: -0.8rem;
+    top: -0.8rem;
+    width: 3rem;
+    height: 3rem;
+    
+    
+    /*Other styles*/
+  }
+
+@media (min-width: 1440px) {
+    .img-wrapper {
+            height: 40vw;
+   
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 2rem;
+    }
+
+section {
+    width: auto;
+    
+}
+
+.img-wrapper {
+    /* width: 100%; */
+    border-radius: 1rem;
+    /* height: 30vh; */
+}
+
+.slider-wrapper {
+    flex-direction: column-reverse;
+    padding-top: 2rem;
+    justify-content: center; 
+    align-items: center;
+}
+
+p {
+    /* font-size: 2rem; */
+    margin-top: 2rem;
+    text-align: left;
+    align-self: flex-start;
+}
+}
+
+
+
+.img-appear {
+    animation-name: appearAnimation ;
+    animation-duration: 0.3s;
+}
+
+.img-disappear {
+    animation-name:  hiddenAnimation;
+    animation-duration: 0.3s;
+}
+
+@keyframes appearAnimation {
+    from {filter: brightness(0);}
+    to {filter: brightness(1);}
+}
+
+@keyframes hiddenAnimation {
+    from {filter: brightness(1);}
+    to {filter: brightness(0);}
+}
+
