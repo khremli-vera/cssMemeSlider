@@ -72,6 +72,10 @@ p {
 }
 
 
+.slider-btn:active {
+    background-color: yellow;
+}
+
 .active {
     background-color: black;
     border: 2px solid #679130;

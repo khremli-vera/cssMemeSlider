@@ -1,5 +1,5 @@
 let images = ['img/T0.jpeg', 'img/T2.jpeg', 'img/T3.jpeg', 'img/T4.jpeg']
-let phrases = ['Я это не понимаю. Мне это неинтересно', 'Сомнительно...', 'Ни-ку-да', 'Но осуждаю']
+let phrases = ['Я это не понимаю. Мне это неинтересно', 'Сомнительно, но окэй...', 'Ни-ку-да. Вот просто ни-ку-да', 'Ну, это их выборю И я не могу их осуждать.Но хотя осуждаю']
 let controls = document.querySelectorAll('.slider-btn')
 let imageContainer = document.querySelector('.slider-image')
 let imageTitle = document.querySelector('p')
