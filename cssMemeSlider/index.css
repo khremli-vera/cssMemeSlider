@@ -1,0 +1,146 @@
+html {
+    font-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000000;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wrapper {
+    height: 40vw;
+    margin: 10rem auto 0;
+    width: 90%;
+    position: relative;
+}
+
+input {
+    position: absolute;
+    right: 0;
+    bottom: -4rem;
+    cursor: pointer;
+}
+
+input:first-child {
+    right: 9rem;
+}
+
+input:nth-child(2) {
+    right: 6rem;
+}
+
+input:nth-child(3) {
+    right: 3rem;
+}
+
+
+.slider {
+    background-color: #ddd;
+    height: inherit;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.slides {
+    height: inherit;
+    position: absolute;
+    width: inherit;
+    background-size: cover;
+    opacity: 0;
+    z-index: 0;
+    transition: opacity ease-in-out .5s;
+}
+
+.slide1 {
+    background-image: url(img/T0.jpeg);
+}
+
+.slide2 {
+    background-image: url(img/T2.jpeg);
+}
+
+.slide3 {
+    background-image: url(img/T3.jpeg);
+}
+
+.slide4 {
+    background-image: url(img/T4.jpeg);
+}
+
+.wrapper label {
+    position: absolute;
+    /* display: block; */
+    left: 0;
+    bottom: -7rem;
+    cursor: pointer;
+    margin: 2rem 0;
+    font-size: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    /* display: none;     */
+    opacity: 0;
+    z-index: 0;
+    transition: opacity ease-in-out .5s;
+}
+
+#slide1:checked~.slider>.slide1,
+#slide2:checked~.slider>.slide2,
+#slide3:checked~.slider>.slide3,
+#slide4:checked~.slider>.slide4 {
+    opacity: 1;
+    z-index: 1;
+    
+}
+
+#slide1:checked~.controls label:nth-of-type(1),
+#slide2:checked~.controls label:nth-of-type(2),
+#slide3:checked~.controls label:nth-of-type(3),
+#slide4:checked~.controls label:nth-of-type(4) {
+    /* display: block; */
+    opacity: 1;
+    z-index: 1;
+}
+
+@media (max-width: 800px) {
+    .wrapper {
+        margin: 4rem auto 0;
+        height: 50vw;
+        }
+
+    .wrapper label {
+        bottom: -10rem;
+    }
+
+    input {
+        right: 35%;
+    }
+
+    input:first-child {
+        right: 65%;
+    }
+
+    input:nth-child(3) {
+        right: 45%;
+    }
+
+    input:nth-child(2) {
+        right: 55%;
+    }
+
+    .wrapper label {
+        margin-top: 6rem;
+    }
+}
+
+@media (max-width: 680px) {
+      .wrapper label {
+        bottom: -14rem;
+    }
+}
